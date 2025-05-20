@@ -1,4 +1,5 @@
 import { FileText } from "lucide-react"
+import aimg from "../assets/img/a.jpg";
 
 const Hero = ({ darkMode }) => {
   return (
@@ -18,14 +19,14 @@ const Hero = ({ darkMode }) => {
             <a href="#contact" className="contact-button">
               Contáctame
             </a>
-            <a href="#" className="cv-button">
+            {/* <a href="#" className="cv-button">
               Descargar CV <FileText className="icon" />
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="hero-image-container">
           <div className="profile-image-border">
-            <img src="/images/profile.png" alt="Doris Valverde" className="profile-image" />
+            <img src={aimg} alt="Doris Valverde" className="profile-image" />
           </div>
         </div>
       </div>

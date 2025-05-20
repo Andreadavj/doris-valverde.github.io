@@ -1,32 +1,54 @@
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink } from "lucide-react";
+import jwtImg from "../assets/img/jwt.jpg";
+import apiImg from "../assets/img/consumoapi.jpg";
+import jsImg from "../assets/img/js.jpg";
+import cssImg from "../assets/img/css.jpg";
+import backendImg from "../assets/img/backend.jpeg";
 
 const Projects = () => {
   const projects = [
+    
     {
-      title: "Portfolio Personal",
-      description: "Sitio web personal desarrollado con React y CSS avanzado para mostrar mis proyectos y habilidades.",
-      technologies: ["React", "CSS", "JavaScript"],
-      github: "https://github.com/Andreadavj/doris-valverde.github.io",
-      demo: "https://andreadavj.github.io/doris-valverde.github.io/",
-      image: "/images/project1.png",
-    },
-    {
-      title: "Aplicación de Tareas",
-      description: "Aplicación para gestionar tareas diarias con funcionalidades de crear, editar y eliminar tareas.",
-      technologies: ["React", "JavaScript", "CSS"],
-      github: "#",
-      demo: "#",
-      image: "/images/project2.png",
-    },
-    {
-      title: "E-commerce",
-      description: "Tienda en línea con catálogo de productos, carrito de compras y proceso de pago.",
-      technologies: ["React", "JavaScript", "CSS", "API"],
-      github: "#",
-      demo: "#",
-      image: "/images/project3.png",
-    },
-  ]
+    title: " css",
+    description: "Galería interactiva con animaciones avanzadas utilizando solo HTML y CSS para mejorar la experiencia visual.",
+    technologies: ["React", "CSS", "JavaScript"],
+    github: "https://github.com/Andreadavj/doris-valverde.github.io",
+    demo: "https://github.com/Andreadavj/css-animaciones",
+    image: cssImg,
+  },
+  {
+    title: " Conversor de Monedas",
+    description: "Aplicación en JavaScript que consume una API para convertir monedas en tiempo real, con diseño responsivo.",
+    technologies: ["React", "CSS", "JavaScript"],
+    github: "https://github.com/Andreadavj/doris-valverde.github.io",
+    demo: "https://github.com/Andreadavj/javascript-API",
+    image: jsImg,
+  },
+  {
+    title: "API",
+    description:  "Proyecto React que muestra un listado de productos usando datos externos desde una API, con diseño moderno y carrito de compras.",
+    technologies: ["React", "JavaScript", "CSS", "API"],
+    github: "https://github.com/Andreadavj",
+    demo: "https://github.com/Andreadavj/react-api",
+    image: apiImg, 
+  },
+  {
+    title: "JWT",
+    description: "Aplicación fullstack que implementa autenticación de usuarios con JSON Web Tokens, rutas protegidas y CRUD de tareas.",
+    technologies: ["React", "JavaScript", "CSS", "API"],
+    github: "https://github.com/Andreadavj",
+    demo: "https://github.com/Andreadavj/react-jwt",
+    image: jwtImg, 
+  },{
+    title: " Backend",
+    description: "Servidor desarrollado con Express y PostgreSQL para gestionar publicaciones de una red social tipo 'Like Me'. Incluye rutas REST y manejo de errores.",
+    technologies: ["React", "CSS", "JavaScript"],
+    github: "https://github.com/Andreadavj",
+    demo: "https://github.com/Andreadavj/backend-likemill",
+    image: backendImg,
+  },
+];
+
 
   return (
     <section id="projects" className="projects-section">
