@@ -1,41 +1,44 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Experience from "./components/Experience"
-import Skills from "./components/Skills"
+import Education from "./components/Education"
 import Projects from "./components/Projects"
+import Skills from "./components/Skills"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import "./App.css"
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode")
+    return savedMode === null ? true : JSON.parse(savedMode)
+  })
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
-
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode))
+  }, [darkMode])
   return (
-    <div
-      className={`min-h-screen transition-colors duration-300 ${darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"}`}
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <main>
-          <Hero darkMode={darkMode} />
-          <About darkMode={darkMode} />
-          <Experience darkMode={darkMode} />
-          <Skills darkMode={darkMode} />
-          <Projects darkMode={darkMode} />
-          <Contact darkMode={darkMode} />
-        </main>
-        <Footer darkMode={darkMode} />
-      </div>
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+      <main className="main-content">
+        <Hero darkMode={darkMode} />
+        <About />
+        <Experience />
+        <Education />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   )
 }
 
 export default App
+
+
 
